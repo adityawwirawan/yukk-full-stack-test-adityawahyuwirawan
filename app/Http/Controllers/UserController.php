@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function showLoginForm()
     {
-        if($this->middleware('auth')){
+        if(Auth::check() == true){
             return redirect()->back();
         }
 
